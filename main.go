@@ -33,7 +33,7 @@ func main() {
 
 	port := os.Getenv("APP_PORT")
 	if port == "" {
-		port = "8000" // Default port
+		port = "3000" // Default port
 	}
 	fmt.Println("Server is running on port " + port)
 	r.Run(":" + port)
