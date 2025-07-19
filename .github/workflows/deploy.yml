@@ -20,8 +20,8 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/student6/rojak
+            cd /home/student/student6
             git pull origin main
-            docker build -t rojak-app .
-            docker rm -f rojak || true
-            docker run -d -p 8006:8000 --env-file /home/student6/rojak/.env --name rojak rojak-app
+            docker build -t student6-app .
+            docker rm -f student6 || true
+            docker run -d -p 8006:8000 --env-file /home/student/student6/.env --name student6 student6-app
